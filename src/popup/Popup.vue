@@ -1,22 +1,18 @@
 <script setup lang="ts">
-import { storageDemo } from '~/logic/storage'
-
+import AddressNickName from '../components/nicknames/main.vue'
+import Expand from '../components/Expand.vue'
 function openOptionsPage() {
   browser.runtime.openOptionsPage()
 }
 </script>
 
 <template>
-  <main class="w-[300px] px-4 py-5 text-center text-gray-700">
-    <Logo />
-    <div>Popup</div>
-    <SharedSubtitle />
-
-    <button class="btn mt-2" @click="openOptionsPage">
-      Open Options
-    </button>
-    <div class="mt-2">
-      <span class="opacity-50">Storage:</span> {{ storageDemo }}
+  <main class="w-[700px] px-4 py-5 text-center text-gray-700">
+    <div class="flex justify-between items-center font-800 cursor-pointer mb-4" @click="openOptionsPage">
+      <div />
+      <h3>0xWho</h3>
+      <Expand />
     </div>
+    <AddressNickName />
   </main>
 </template>
