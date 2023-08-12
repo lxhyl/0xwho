@@ -4,6 +4,7 @@ export type Address = `0x${string}`
 export interface NicknameItem {
   address: Address
   nickname: string
+  index: string
 }
 
 export const nickNameList = useStorageLocal('0xWho-address-nickName-list', {})
