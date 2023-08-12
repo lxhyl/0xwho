@@ -39,7 +39,7 @@ async function main() {
     const address = node.textContent
     if (!address)
       continue
-    const nickname = nicknameMap[address as keyof NicknameMap]
+    const nickname = nicknameMap[address.toLowerCase() as keyof NicknameMap]
     if (!nickname)
       continue
     // clear all child nodes

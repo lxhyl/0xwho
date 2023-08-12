@@ -60,9 +60,10 @@ const save = (address: string) => {
     return
   if (!editableData[address].nickname)
     return
+
   Object.assign(dataSource.value.filter(item => address === item.address)[0], editableData[address])
   const nicknameMap: NicknameMap = dataSource.value.reduce((acc, cur) => {
-    acc[cur.address] = cur.nickname
+    acc[cur.address.toLowerCase() as keyof NicknameMap] = cur.nickname
     return acc
   }, {} as NicknameMap)
   storage.local.set({ nicknameMap })
