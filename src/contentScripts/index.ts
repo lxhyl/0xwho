@@ -50,4 +50,8 @@ async function main() {
     app.mount(node as Element)
   }
 }
-main()
+
+window.onload = function () {
+  main()
+  setTimeout(main, 5000)
+}

@@ -14,8 +14,9 @@ const flip = (e: Event) => {
 </script>
 
 <template>
-  <span class="vertical-align: middle">
-    <img src="../../assets/0xwho.png" style="width: 24px; height: auto;" alt="" srcset="" @click="flip">
+  <span style="vertical-align: middle; display: inline-flex; line-height: 1.5;">
+    <img src="../../assets/0xwho.png" style="width: 24px; height: auto; margin-right: 1px;" alt="" srcset="" @click="flip">
     {{ showNickname ? props.nickname : props.address }}
+
   </span>
 </template>

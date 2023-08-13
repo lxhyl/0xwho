@@ -100,7 +100,7 @@ const beforeUpload = (file: File) => {
 </script>
 
 <template>
-  <a-table :columns="columns" :data-source="dataSource">
+  <a-table :columns="columns" :data-source="dataSource" :pagination="{ pageSize: 8 }">
     <template #headerCell="{ title }">
       <div v-if="title === 'action'" class="flex items-center cursor-pointer ">
         <div class="mr-2">
@@ -131,6 +131,7 @@ const beforeUpload = (file: File) => {
             v-if="editableData[record.index]"
             v-model:value="(editableData[record.index][column.dataIndex as keyof NicknameItem])"
             style="margin: -5px 0"
+            class="w-full"
           />
           <template v-else>
             {{ text }}
