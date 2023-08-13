@@ -4,6 +4,11 @@ export function findEthereumAddressesInNode(): Node[] {
   const resultSet = new Set<Node>()
 
   const deepFn = (node: Node) => {
+    if ((node).nodeName === 'A') {
+      const matches = (node as Element).getAttribute('href')?.match(/0x[a-fA-F0-9]{40}/)
+      if (matches)
+        resultSet.add(node)
+    }
     if (node.nodeType === Node.TEXT_NODE) {
       const matches = node.textContent?.match(ethereumAddressPattern)
       if (matches)

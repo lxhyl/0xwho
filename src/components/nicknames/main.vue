@@ -93,6 +93,9 @@ const beforeUpload = (file: File) => {
       acc[cur.address.toLowerCase() as keyof NicknameMap] = cur.nickname
       return acc
     }, {} as NicknameMap)
+    dataSource.value.forEach((item) => {
+      nicknameMap[item.address.toLowerCase() as keyof NicknameMap] = item.nickname
+    })
     storage.local.set({ nicknameMap })
     loadListFromLocal()
   }

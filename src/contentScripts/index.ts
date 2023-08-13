@@ -36,7 +36,11 @@ async function main() {
   if (!nicknameMap)
     return
   for (const node of allNode) {
-    const address = node.textContent
+    let address: string | null | undefined = node.textContent
+    if (!address?.match(/^0x[a-fA-F0-9]{40}$/)) {
+      if (node.nodeName === 'A')
+        address = (node as Element).getAttribute('href')?.match(/0x[a-fA-F0-9]{40}/)?.[0]
+    }
     if (!address)
       continue
     const nickname = nicknameMap[address.toLowerCase() as keyof NicknameMap]
