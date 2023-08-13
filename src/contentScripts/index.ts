@@ -38,7 +38,7 @@ async function main() {
   for (const node of allNode) {
     let address: string | null | undefined = node.textContent
     if (!address?.match(/^0x[a-fA-F0-9]{40}$/)) {
-      if (node.nodeName === 'A')
+      if (node.nodeName === 'A' && address?.startsWith('0x'))
         address = (node as Element).getAttribute('href')?.match(/0x[a-fA-F0-9]{40}/)?.[0]
     }
     if (!address)
