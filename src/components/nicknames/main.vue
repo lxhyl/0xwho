@@ -141,11 +141,11 @@ const beforeUpload = (file: File) => {
     </template>
   </a-table>
   <div class="flex mt-2 gap-2">
-    <a-button type="link" @click="exportFile">
+    <a-button type="link" style="color: rgb(238,121,80)" @click="exportFile">
       Export
     </a-button>
     <a-upload :before-upload="beforeUpload">
-      <a-button type="link">
+      <a-button type="link" style="color: rgb(238,121,80)">
         <upload-outlined />
         Import
       </a-button>
