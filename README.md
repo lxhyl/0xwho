@@ -2,8 +2,13 @@
 
 0xWho is an browser extension that allows you customize address nickname.
 
-![](https://user-images.githubusercontent.com/41041503/260282152-0a4f8668-0182-4686-a04a-48760c7e6b08.png)
+* without 0xWho  
+  
+![](https://user-images.githubusercontent.com/41041503/263475543-f2444f96-7544-4741-80fc-fbea45395ccd.png)
 
+* with 0xWho
+  
+![](https://user-images.githubusercontent.com/41041503/263475550-6e20450e-0b06-43b8-bf62-34e11878fe03.png)
 
 ### use case
 
