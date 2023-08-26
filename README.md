@@ -10,6 +10,8 @@
   
 ![](https://user-images.githubusercontent.com/41041503/263475550-6e20450e-0b06-43b8-bf62-34e11878fe03.png)
 
-### use case
+
+
+## Use
 
 * click the icon to flip the nickname
