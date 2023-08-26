@@ -12,4 +12,4 @@
 
 ### use case
 
-* click the icon on the right of the address to flip the nickname
+* click the icon to flip the nickname
